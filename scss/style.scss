@@ -1,0 +1,121 @@
+$background-color: black;
+
+@mixin center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    color: white;
+    font-family: 'Hind', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:not(.nav-button):hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: $background-color;
+}
+
+footer {
+    align-items: center;
+    background-color: #252525;
+    bottom: 0;
+    display: flex;
+    position: fixed;
+    width: 100%;
+
+    p {
+        padding-right: 1em;
+    }
+
+    .logo {
+        width: 3.5em;
+    }
+
+    .separator {
+        width: 100%;
+    }
+}
+
+header {
+    background-color: $background-color;
+    text-align: center;
+}
+
+h2 {
+    @include center;
+    padding: 0.5em;
+}
+
+hr {
+    background-color: white;
+    border: none;
+    height: 0.1em;
+}
+
+main {
+    @include center;
+    background-color: $background-color;
+    padding: 1em;
+}
+
+nav {
+    display: inline-block;
+
+    .icon {
+        filter: invert(100%);
+    }
+
+    .nav-button {
+        display: block;
+        padding: 1em;
+    }
+
+    .nav-button:not(.nav-mainbutton):hover {
+        background-color: white;
+        color: black;
+
+        .icon {
+            filter: invert(0%);
+        }
+    }
+
+    .nav-item {
+        display: inline-block;
+    }
+
+    .nav-list {
+        list-style: none;
+    }
+
+    .nav-mainitem {
+        position: relative;
+        top: 1.55em;
+    }
+
+    .nav-mainbutton {
+        @include center;
+        padding: 0;
+    }
+}
+
+#mainvideo {
+    width: 560px;
+    height: 315px;
+}
+
+@media screen and (max-width: 600px) {
+    #mainvideo {
+        width: 280px;
+        height: 157.5px;
+    }
+}
