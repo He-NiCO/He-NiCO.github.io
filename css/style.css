@@ -61,6 +61,7 @@ main {
   display: flex;
   justify-content: center;
   background-color: black;
+  margin-top: 3em;
   padding: 1em;
 }
 
